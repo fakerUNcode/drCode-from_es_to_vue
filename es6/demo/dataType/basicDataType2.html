@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = new Set([1,2,3,2,1,"2"])
+        console.log("numbers",numbers)
+        console.log(typeof numbers)
+
+        let arr = ["a","b","c","b","c",1,true]
+        console.log(arr)
+        console.log(typeof arr)
+
+        function add(x,y){
+            return x+y
+        }
+        console.log(add(10,20))
+
+        class animal{
+            name
+            shelter
+            constructor(nameInput,shelterInput){
+                this.name = nameInput
+                this.shelter = shelterInput
+            }
+
+            info(){
+                console.log("name:",this.name,"shelter:",this.shelter)
+            }
+        }
+
+        let catAnimal = new animal("cat","home")
+        catAnimal.info()
+
+    </script>
+    <h1>
+        more data type
+    </h1>
+</body>
+</html>
