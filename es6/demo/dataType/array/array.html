@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //数组定义
+        let arr = [1, 2, 3, 4, 5]
+        console.log("arr", arr)
+
+        //push
+        let arrlength = arr.push(6, 7, 8)
+        console.log("arr", arr)
+        console.log("arr's length", arrlength)
+
+        //unshift
+        arrlength = arr.unshift(-1, 0)
+        console.log("arr", arr)
+        console.log("arr's length", arrlength)
+
+        //shift
+        let delElement = arr.shift()
+        console.log("the element deleted", delElement)
+        console.log("arr", arr)
+        console.log("arr's length", arr.length)
+
+        //pop
+        delElement = arr.pop()
+        console.log("the element deleted", delElement)
+        console.log("arr", arr)
+        console.log("arr's length", arr.length)
+
+        //删除元素删除元素, 并返回包含被删除元素的数组 splice(要删除元素的索引位置, 要删除的元素数量)
+        let delArr = arr.splice(2, 3)
+        console.log("the arr to be deleted", delArr)
+        console.log("arr", arr)
+        console.log("arr's length", arr.length)
+
+        //颠倒元素
+        arr.reverse()
+        console.log("the array after reverse", arr)
+
+        //数组中的元素按首字母排序
+        let fruit_array = ['banana', 'apple', 'pineaplle', 'orange']
+        console.log("the fruit before sort", fruit_array)
+        fruit_array.sort()
+        console.log("the fruit after sort", fruit_array)
+
+        //数组中的元素按数字大小顺序排列
+        let number_array = [321, 1121, 1, 32, 99, 190]
+        console.log("the number before sort", number_array)
+        //number_array.sort()这种方法只能排成1,1121,190,32,321,99,按照了数字的首数字排序
+        /*
+        比较函数 (a, b) => a - b 接收两个参数 a 和 b, 用于比较这两个元素的大小, 返回 a - b 的结果决定了 sort() 方法的排序顺序
+        若 a < b, 则 a - b 是一个负数, 表示 a 应该在 b 前面
+        若 a = b, 则 a - b 是 0, 位置保持不变
+        若 a > b, 则 a - b 是一个正数, 表示 a 应该在 b 后面
+        */
+        number_array.sort((a, b) => a - b)
+        console.log("the number after sort", number_array)
+
+        //筛选符合条件的元素并返回新数组
+        //筛选符合条件的元素, 返回一个新的数组
+        let filter_arrary = [10, 11, 12, 13, 14, 15]
+        let filtered_array = filter_arrary.filter((value, index) => {
+            return value > 12, index < 5
+        })
+        console.log("array to be filtered", filter_arrary)
+        console.log("filtered_array", filtered_array) //[13, 14]
+
+        //for循环遍历数组
+        let arr_to_iterate = ["王朝廷", "dengruicode.com", 100] //数组可以包含不同的数据类型
+        for (let item of arr_to_iterate) {
+            console.log("for iterate show that:", item)
+        }
+
+        // 使用 forEach 遍历
+        arr_to_iterate.forEach((value) => {
+            console.log("foreach iterate about values show that:", "value:", value);
+        });
+
+        arr_to_iterate.forEach((value, index) => {
+            console.log("foreach iterate about index and values show that:", "index:",index,"value:", value);
+        });
+
+    </script>
+    <h1>
+        array test
+    </h1>
+</body>
+
+</html>
