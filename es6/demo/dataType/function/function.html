@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //一般函数定义
+        function getweb(){
+            let web = "showmarker.com"
+            return web
+        }
+        console.log(getweb())
+
+        //函数默认值
+        function getPage(page = 1){
+            return page
+        }
+        console.log(getPage())
+        console.log(getPage(2))
+
+        //匿名函数
+        let sub = function(x,y){
+            return x - y
+        }
+        console.log(sub(30,15))
+
+        //箭头函数
+        let add = (a,b)=>{
+            return a + b
+        }
+        console.log(add(15,15))
+
+        //隐式返回
+        let add_simplified = (a,b) => a+b
+        console.log(add_simplified(12,13))
+    </script>
+    <h1>
+        function test
+    </h1>
+</body>
+</html>
