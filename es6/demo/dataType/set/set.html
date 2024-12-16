@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //创建Set集合
+        //let fruits = new Set() //创建一个空的Set集合
+        let fruits = new Set(['apple', 'orange', 'banana']) //创建一个包含初始值的Set集合
+
+        //向Set集合中添加新的元素
+        fruits.add('mango')
+        //fruits.add("orange") //若该元素已经存在, 则不会重复添加, 因为 Set 中的元素必须唯一
+        console.log("fruits", fruits)
+
+        //从Set集合中删除元素
+        fruits.delete('banana')
+        console.log("fruits", fruits)
+
+        //检查Set集合是否包含指定元素
+        console.log("fruits.has banana?", fruits.has('banana'))
+
+        //获取Set集合的大小
+        console.log("fruits.size", fruits.size)
+
+        //使用 Array.from() 方法将 Set集合 转换为 数组
+        let arr = Array.from(fruits)
+        console.log("arr", arr)
+
+        //使用扩展运算符将 Set集合 转换为 数组
+        let arr2 = [...fruits]
+        console.log("arr2", arr2)
+
+        //扩展运算符是用于展开可迭代对象(如数组、字符串等)
+        //let web = 'dengruicode.com'
+        let web = 'chaoting编程'
+        let webArr = [...web] //使用扩展运算符将 字符串 转换为 数组
+        console.log("webArr", webArr) //['邓', '瑞', '编', '程']
+
+        //使用for...of循环遍历 Set集合
+        for (let item of fruits) {
+            console.log("for...of", item)
+        }
+
+        //使用forEach方法来遍历 Set集合
+        fruits.forEach(value => {
+            console.log("forEach", value)
+        })
+
+        //清空 Set
+        fruits.clear()
+        console.log("fruits.size", fruits.size)
+
+        //将 数组 转换为 Set集合 实现数组去重
+        let numberArr = [1, 2, 3, 3, 2, 1]
+        let numberSet = new Set(numberArr)
+        console.log(numberSet)
+    </script>
+    <h1>
+        set test.
+    </h1>
+</body>
+
+</html>
